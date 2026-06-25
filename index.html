@@ -1,9 +1,7 @@
 <html>
 <head>
     <title>Deekshita's Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Deekshita's Portfolio - Physics Student, Web Designer, Artist, Poet">
+
 
 <style>
 
@@ -18,16 +16,11 @@
         #24243e
     );
     color:#f5f5f5;
-    box-sizing:border-box;
-}
-
-*{
-    box-sizing:border-box;
 }
 
     .header{
         text-align:center;
-        padding:50px 20px;
+        padding:50px;
     }
 
     .profile{
@@ -41,14 +34,6 @@
     .header h1{
            color:#ffffff;
         margin-top:20px;
-        font-size:2.5rem;
-        margin-bottom:10px;
-    }
-
-    .header p{
-        font-size:1.1rem;
-        margin:10px 0;
-        color:#ddd;
     }
 
    .navbar{
@@ -63,33 +48,25 @@
     top:0;
 
     z-index:100;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
 }
 
 .navbar a{
     color:white;
     text-decoration:none;
-    margin:5px 10px;
+    margin:15px;
     font-weight:bold;
     transition:0.3s;
-    padding:8px 15px;
-    border-radius:5px;
 }
 
 .navbar a:hover{
     color:#ff7af6;
-    background:rgba(255,175,204,0.1);
 }
 	
 .card{
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(10px);
 
-    width:90%;
-    max-width:900px;
+    width:80%;
     margin:25px auto;
     padding:25px;
 
@@ -111,45 +88,20 @@
 
   h2{
     color:#ff7af6;
-    font-size:2rem;
-    margin-bottom:15px;
 }
-
-  h3{
-    font-size:1.3rem;
-    margin-top:20px;
-    margin-bottom:10px;
-    color:#b8a3ff;
-}
-
-  p{
-    font-size:1rem;
-    line-height:1.6;
-    margin:10px 0;
-  }
-
-  ul{
-    font-size:1rem;
-    line-height:1.8;
-  }
-
-  li{
-    margin:10px 0;
-  }
 
    
 .gallery{
     display:grid;
     grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
+    repeat(auto-fit,minmax(250px,1fr));
 
     gap:15px;
-    margin:20px 0;
 }
 
 .gallery img{
     width:100%;
-    height:200px;
+    height:250px;
 
     object-fit:contain;
 
@@ -162,28 +114,15 @@
 }
 
 .gallery img:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 15px rgba(255,175,204,0.5);
+    transform:scale(1.03);
 }
 
 	.btn{
     background:#8b5cf6;
     color:white;
-    padding:10px 20px;
+    padding:8px 15px;
     text-decoration:none;
     border-radius:8px;
-    display:inline-block;
-    margin:10px 5px;
-    transition:0.3s;
-    border:none;
-    cursor:pointer;
-    font-size:1rem;
-}
-
-.btn:hover{
-    background:#a875ff;
-    transform:translateY(-2px);
-    box-shadow:0 5px 15px rgba(139,92,246,0.4);
 }
 
 .skill{
@@ -200,16 +139,12 @@
     border-radius:25px;
 
     font-weight:bold;
-    font-size:0.9rem;
 }
-
     footer{
         text-align:center;
-        padding:30px 20px;
+        padding:20px;
         margin-top:30px;
-        color:#999;
-        border-top:1px solid rgba(255,255,255,0.1);
-        font-size:0.95rem;
+        color:#555;
     }
 
     /* Modal Styles */
@@ -221,9 +156,8 @@
         top:0;
         width:100%;
         height:100%;
-        background-color:rgba(0,0,0,0.95);
+        background-color:rgba(0,0,0,0.9);
         animation:fadeIn 0.3s;
-        overflow:auto;
     }
 
     @keyframes fadeIn {
@@ -235,8 +169,8 @@
         margin:auto;
         display:block;
         width:90%;
-        max-width:900px;
-        max-height:85vh;
+        max-width:800px;
+        max-height:80vh;
         object-fit:contain;
         position:absolute;
         top:50%;
@@ -251,258 +185,54 @@
     }
 
     .close-btn {
-        position:fixed;
+        position:absolute;
         top:20px;
-        right:30px;
+        right:40px;
         color:#f1f1f1;
         font-size:40px;
         font-weight:bold;
         cursor:pointer;
         transition:0.3s;
-        background:rgba(0,0,0,0.5);
-        border-radius:50%;
-        width:50px;
-        height:50px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        z-index:1001;
     }
 
     .close-btn:hover,
     .close-btn:focus {
         color:#bbb;
-        background:rgba(0,0,0,0.8);
-    }
-
-    /* Hamburger Menu for Mobile */
-    .menu-toggle {
-        display:none;
-        background:none;
-        border:none;
-        color:white;
-        font-size:1.5rem;
-        cursor:pointer;
-        padding:10px;
-    }
-
-    .navbar.active {
-        flex-direction:column;
-        gap:0;
-    }
-
-    .navbar.active a {
-        display:block;
-        width:100%;
-        margin:0;
-        text-align:center;
-        padding:15px;
     }
 
 
 @media screen and (max-width: 768px){
 
-    .header{
-        padding:30px 15px;
+    .card{
+        width:95%;
+        padding:15px;
     }
 
-    .header h1{
-        font-size:1.8rem;
+    .gallery img{
+        width:90%;
     }
-
-    .header p{
-        font-size:1rem;
-    }
-
+	
+	
     .profile{
         width:140px;
         height:140px;
     }
 
-    .navbar{
-        padding:10px;
-    }
-
     .navbar a{
-        margin:5px;
-        padding:6px 12px;
-        font-size:0.9rem;
-    }
-
-    .card{
-        width:95%;
-        margin:20px auto;
-        padding:20px 15px;
-    }
-
-    h2{
-        font-size:1.5rem !important;
-    }
-
-    h3{
-        font-size:1.1rem !important;
-    }
-
-    p{
-        font-size:0.95rem !important;
-    }
-
-    ul{
-        font-size:0.95rem !important;
-        padding-left:20px;
-    }
-
-    .gallery{
-        grid-template-columns:
-        repeat(auto-fit,minmax(150px,1fr));
-        gap:10px;
-    }
-
-    .gallery img{
-        height:150px;
-    }
-
-    .btn{
-        padding:8px 16px;
-        margin:8px 3px;
-        font-size:0.9rem;
-        width:100%;
-    }
-
-    .skill{
-        padding:8px 14px;
-        margin:4px;
-        font-size:0.85rem;
-    }
-
-    .close-btn {
-        top:15px;
-        right:15px;
-        font-size:30px;
-        width:45px;
-        height:45px;
+        display:block;
+        margin:10px;
     }
 
     .modal-content {
         width:95%;
         max-width:100%;
-        max-height:70vh;
-    }
-
-    footer{
-        padding:20px 15px;
-        font-size:0.85rem;
-    }
-
-}
-
-@media screen and (max-width: 480px){
-
-    .header{
-        padding:20px 10px;
-    }
-
-    .header h1{
-        font-size:1.5rem;
-        margin-top:15px;
-    }
-
-    .header p{
-        font-size:0.9rem;
-    }
-
-    .profile{
-        width:120px;
-        height:120px;
-    }
-
-    .navbar{
-        padding:8px;
-        gap:5px;
-    }
-
-    .navbar a{
-        margin:3px;
-        padding:5px 10px;
-        font-size:0.85rem;
-    }
-
-    .card{
-        width:100%;
-        margin:15px auto;
-        padding:15px 12px;
-        border-radius:15px;
-    }
-
-    h2{
-        font-size:1.3rem !important;
-        margin-bottom:10px;
-    }
-
-    h3{
-        font-size:1rem !important;
-        margin-top:15px;
-        margin-bottom:8px;
-    }
-
-    p{
-        font-size:0.9rem !important;
-    }
-
-    ul{
-        font-size:0.9rem !important;
-        padding-left:18px;
-    }
-
-    li{
-        margin:8px 0;
-    }
-
-    .gallery{
-        grid-template-columns:
-        repeat(auto-fit,minmax(130px,1fr));
-        gap:8px;
-    }
-
-    .gallery img{
-        height:130px;
-    }
-
-    .btn{
-        padding:7px 14px;
-        margin:6px 2px;
-        font-size:0.85rem;
-        width:auto;
-    }
-
-    .skill{
-        padding:6px 12px;
-        margin:3px;
-        font-size:0.8rem;
     }
 
     .close-btn {
         top:10px;
-        right:10px;
-        font-size:25px;
-        width:40px;
-        height:40px;
+        right:20px;
+        font-size:30px;
     }
-
-    .modal-content {
-        width:98%;
-        max-height:60vh;
-    }
-
-    marquee{
-        font-size:0.85rem;
-    }
-
-    footer{
-        padding:15px 10px;
-        font-size:0.8rem;
-    }
-
 }
 </style>
 
@@ -513,9 +243,10 @@
 
 <div class="header">
 
-<img src="IMG-20260415-WA0021.jpg" class="profile" alt="Profile Picture">
 
-<h1>Hi, I'm Deekshita</h1>
+<img src="IMG-20260415-WA0021.jpg" class="profile">
+
+<h1>Hi, I'm Deekshita </h1>
 
 <p>
     Physics Student | Web Designer | Artist | Poet 
@@ -524,7 +255,7 @@
 
 </div>
 
-<div class="navbar" id="navbar">
+<div class="navbar">
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#achievements">Achievements</a>
@@ -534,64 +265,60 @@
 
 <div class="card" id="about">
 
+
 <h2>About Me</h2>
 
 <p>
     Hello! My name is Deekshita.
-</p>
-
-<p>
+<br>
     I am currently pursuing a Bachelor of Science degree
     with Physics, Chemistry and Mathematics as my major subjects.
-</p>
-
-<p>
+<br>
     I enjoy exploring science while also expressing myself
     creatively through art, poetry, photography and crafting.
-</p>
-
-<p>
+<br>
     Alongside my academic interests, I enjoy coding and
     learning new technologies.
-</p>
-
-<p>
-    I am currently learning Python, Arduino Uno and web development, with web design
+<br>I am currently learning
+    Python, Arduino Uno and web development, with web design
     being my favourite area so far.
-</p>
-
-<p>
+<br>
     I have successfully passed my O-Level exam
     and enjoy participating in both academic and cultural activities.
 </p>
+
 
 </div>
 
 <div class="card" id="education">
 
+
 <h2>Education</h2>
 
-<img src="images.jpg" width="250" alt="Education Icon" style="max-width:100%; height:auto;">
+<img src="images.jpg" width="250">
 
 <p>
-    <strong>Bachelor of Science (PCM)</strong>
+    Bachelor of Science (PCM)
     <br>
     Shri Dev Suman University
 </p>
+
 
 </div>
 
 <div class="card" id="achievements">
 
+
 <h2>🏆 Achievements & Certifications</h2>
 
 <ul>
+
     <li>Successfully passed O-Level exam.</li>
 
     <li>
         Completed the MTTS (Mathematics Training and Talent Search)
-        6-Day Programme, where I had the opportunity to learn
-        from distinguished professors and mentors. The programme
+        6-Day Programme, <br>where I had the opportunity to learn
+        from distinguished professors and mentors. <br>The programme
         helped me appreciate mathematics from a completely
         different perspective.
     </li>
@@ -603,112 +330,112 @@
     <li>Awarded 3rd Prize in the Speech and Public Speaking Events.</li>
 
     <li>Awarded 2nd Prize in the Sports Activities and Competitions.</li>
+
 </ul>
 
 <h3>Certificate Gallery</h3>
 
 <div class="gallery">
-    <img src="IMG_20260601_103643~2.jpg" alt="Certificate 1" onclick="openModal(this)">
-    <img src="IMG_20260601_103741_HDR~2.jpg" alt="Certificate 2" onclick="openModal(this)">
-    <img src="IMG_20260601_103703_HDR~2.jpg" alt="Certificate 3" onclick="openModal(this)">
-    <img src="IMG_20260601_103750_HDR~2.jpg" alt="Certificate 4" onclick="openModal(this)">
-    <img src="IMG_20260601_103721_HDR~2.jpg" alt="Certificate 5" onclick="openModal(this)">
-    <img src="IMG-20260316-WA0010.jpg" alt="Certificate 6" onclick="openModal(this)">
-</div>
+
+    <img src="IMG_20260601_103643~2.jpg" onclick="openModal(this)">
+    <img src="IMG_20260601_103741_HDR~2.jpg" onclick="openModal(this)">
+    <img src="IMG_20260601_103703_HDR~2.jpg" onclick="openModal(this)">
+    <img src="IMG_20260601_103750_HDR~2.jpg" onclick="openModal(this)">
+    <img src="IMG_20260601_103721_HDR~2.jpg" onclick="openModal(this)">
+	<img src="IMG-20260316-WA0010.jpg" onclick="openModal(this)">
+	
 
 </div>
+
+
+</div>
+<div class="navbar">
+<h2>
+Skills
+</h2>
+</div>
+
 
 <div class="card" id="skills">
 
-<h2>Skills</h2>
 
-<h3>Technical Skills</h3>
-<div style="text-align:center; overflow-x:auto; padding:10px 0;">
-    <span class="skill">HTML</span>
+
+
+    <h3> Technical Skills</h3>
+	<marquee>
+	<span class="skill">HTML</span>
     <span class="skill">CSS</span>
     <span class="skill">Python</span>
-    <span class="skill">Arduino Uno</span>
-    <span class="skill">Web Development</span>
+	<span class="skill">Arduino Uno</span>
+	<span class="skill">Web Development</span>
+	</marquee>
+<div class="card">
+	<h3>Some of my mini projects are : </h3><br><br>
+	<h3>Arduino uno traffic light sytem:</h3>
+	<p>A simple traffic light simulation built using Arduino Uno.
+	<br> you can check it out by clicking on this link:
+	<br><br>
+		<a href="https://wokwi.com/projects/465791167760908289" target="_blank" class="btn">click</a></p>
+	<br><br>
+	<div class="gallery">
+		<img src="traffic.png" onclick="openModal(this)">
+	</div>
+	<br><br>
+	<h3>Simple LED light stimulator using Arduino uno:</h3><br>
+	<a href="https://wokwi.com/projects/465792388690520065" target="_blank" class="btn">click </a>
+	<br><br>
+	<div class="gallery">
+		<img src="led light.png" onclick="openModal(this)">
+	</div>
+	<br><br>
+	<h3>Calculator using HTML & CSS:</h3><BR>
+	<a href="https://dixitas3mwal.github.io/calculator-/" target="_blank" class="btn">click to open 
+	</a>
+	<br><br>
+	<div class="gallery">
+		<img src="calcu.png" onclick="openModal(this)">
+	</div>
+	<br><br>
+	<h3>To Do List</h3><br>
+	<p>
+       Manage daily tasks with an interactive add-and-remove task system.</p><br>
+	<a href="https://dixitas3mwal.github.io/To-Do-List-/" target="_blank" class="btn"> click to open site </a>
+	<br><br><div class="gallery">
+		<img src="todolist.png" onclick="openModal(this)">
+	</div>
+	
+	<br><br>
+	<h3>Digital Clock</h3><br>
+	<p>A live clock displaying the current time using JavaScript.</p><br>
+	<a href="https://dixitas3mwal.github.io/digital-clock-/" target="_blank" class="btn"> click to open </a>
+	<br><br>
+	<div class="gallery">
+		<img src="clock.png" onclick="openModal(this)">
+	</div>
+	
+	<br><br>
+	<h3>Background Changer</h3>
+	<p>Change webpage background colors dynamically with button clicks.</p>
+	<a href="https://dixitas3mwal.github.io/Background-Changer-/" target="_blank" class="btn"> click to open </a>
+	<br><br>
+	<div class="gallery">
+		<img src="bgchangei.png" onclick="openModal(this)">
+		<img src="bgchangerii.png" onclick="openModal(this)">
+	</div>
+	
+	<br><br>
+	<h3>Poetry Website:</h3><br>
+	<p>A personal poetry website created using HTML and CSS to showcase original poems in a clean and visually appealing format:</p><br>
+	<a href="https://dixitas3mwal.github.io/moon-venus/" target="_blank" class="btn">click to open the site</a>
+	<br><br>
+	<div class="gallery">
+		<img src="moon.png" onclick="openModal(this)">
+	</div>
+	<br><br>
 </div>
-
-<h3>Mini Projects</h3>
-
-<div style="margin:30px 0;">
-    <h3>🔴 Arduino uno traffic light system:</h3>
-    <p>A simple traffic light simulation built using Arduino Uno.</p>
-    <p>You can check it out by clicking on the link below:</p>
-    <a href="https://wokwi.com/projects/465791167760908289" target="_blank" class="btn">View Project</a>
-    
-    <div class="gallery">
-        <img src="traffic.png" alt="Traffic Light Project" onclick="openModal(this)">
-    </div>
 </div>
-
-<div style="margin:30px 0;">
-    <h3>💡 Simple LED light simulator using Arduino uno:</h3>
-    <p>Interactive LED light control using Arduino Uno.</p>
-    <a href="https://wokwi.com/projects/465792388690520065" target="_blank" class="btn">View Project</a>
-    
-    <div class="gallery">
-        <img src="led light.png" alt="LED Project" onclick="openModal(this)">
-    </div>
-</div>
-
-<div style="margin:30px 0;">
-    <h3>🧮 Calculator using HTML & CSS:</h3>
-    <p>A fully functional calculator built with HTML and CSS.</p>
-    <a href="https://dixitas3mwal.github.io/calculator-/" target="_blank" class="btn">Open Calculator</a>
-    
-    <div class="gallery">
-        <img src="calcu.png" alt="Calculator Project" onclick="openModal(this)">
-    </div>
-</div>
-
-<div style="margin:30px 0;">
-    <h3>✅ To Do List</h3>
-    <p>Manage daily tasks with an interactive add-and-remove task system.</p>
-    <a href="https://dixitas3mwal.github.io/To-Do-List-/" target="_blank" class="btn">Open To Do List</a>
-    
-    <div class="gallery">
-        <img src="todolist.png" alt="To Do List Project" onclick="openModal(this)">
-    </div>
-</div>
-
-<div style="margin:30px 0;">
-    <h3>⏰ Digital Clock</h3>
-    <p>A live clock displaying the current time using JavaScript.</p>
-    <a href="https://dixitas3mwal.github.io/digital-clock-/" target="_blank" class="btn">Open Clock</a>
-    
-    <div class="gallery">
-        <img src="clock.png" alt="Digital Clock Project" onclick="openModal(this)">
-    </div>
-</div>
-
-<div style="margin:30px 0;">
-    <h3>🎨 Background Changer</h3>
-    <p>Change webpage background colors dynamically with button clicks.</p>
-    <a href="https://dixitas3mwal.github.io/Background-Changer-/" target="_blank" class="btn">Open Background Changer</a>
-    
-    <div class="gallery">
-        <img src="bgchangei.png" alt="Background Changer 1" onclick="openModal(this)">
-        <img src="bgchangerii.png" alt="Background Changer 2" onclick="openModal(this)">
-    </div>
-</div>
-
-<div style="margin:30px 0;">
-    <h3>📝 Poetry Website:</h3>
-    <p>A personal poetry website created using HTML and CSS to showcase original poems in a clean and visually appealing format.</p>
-    <a href="https://dixitas3mwal.github.io/moon-venus/" target="_blank" class="btn">Visit Poetry Site</a>
-    
-    <div class="gallery">
-        <img src="moon.png" alt="Poetry Website" onclick="openModal(this)">
-    </div>
-</div>
-
-</div>
-
-<div class="card" id="soft-skills">
-    <h3>Soft Skills</h3>
+<div class="card" id="skills">
+    <h3> Soft Skills</h3>
 
     <ul>
         <li>Public Speaking</li>
@@ -718,56 +445,54 @@
         <li>Problem Solving</li>
         <li>Arts/Craft</li>
     </ul>
-
-    <h3>Gallery</h3>
-    <div class="gallery">
-        <img src="IMG-20260330-WA0003.jpg" alt="Soft Skills 1" onclick="openModal(this)">
-        <img src="IMG1.jpg" alt="Soft Skills 2" onclick="openModal(this)">
-        <img src="art3.png" alt="Soft Skills 3" onclick="openModal(this)">
-    </div>
+<div class="gallery">
+	<img src="IMG-20260330-WA0003.jpg" onclick="openModal(this)">
+	<img src="IMG1.jpg" onclick="openModal(this)">
+	<img src="art3.png" onclick="openModal(this)">
+</div>
 
 </div>
 
+
+
 <div class="card" id="contact">
+
 
 <h2>Contact Me</h2>
 
-<p>
-    📧 <strong>Email:</strong> deekshitasemwal@gmail.com
-</p>
+<h3>
+     Email: deekshitasemwal@gmail.com
+    <br><br>
+    Instagram: @dxsmwl
+	<br>
+	<br>
+	LinkedIn account:
+	<br>
+	<a href="https://www.linkedin.com/in/deekshita-semwal-52280b3b4/">
+		Click to open
+	</a>
+   <br>
+	Github account:
+	<a href="https://github.com/dixitas3mwal">
+		My github profile
+	</a>
+</h3>
 
-<p>
-    📷 <strong>Instagram:</strong> @dxsmwl
-</p>
-
-<p>
-    🔗 <strong>LinkedIn:</strong>
-    <br>
-    <a href="https://www.linkedin.com/in/deekshita-semwal-52280b3b4/" target="_blank" class="btn">
-        Visit LinkedIn Profile
-    </a>
-</p>
-
-<p>
-    💻 <strong>GitHub:</strong>
-    <br>
-    <a href="https://github.com/dixitas3mwal" target="_blank" class="btn">
-        View GitHub Profile
-    </a>
-</p>
 
 </div>
 
 <!-- Modal for Full Image View -->
 <div id="imageModal" class="modal" onclick="closeModal()">
     <span class="close-btn" onclick="event.stopPropagation(); closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage" alt="Full view image">
+    <img class="modal-content" id="modalImage">
 </div>
 
 <footer>
-    © 2026 Deekshita Semwal
-    <br>
-    Built with HTML & CSS
+
+
+© 2026 Deekshita Semwal
+Built with HTML & CSS
+
 </footer>
 
 <script>
@@ -775,7 +500,6 @@
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
         modalImg.src = img.src;
-        modalImg.alt = img.alt;
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
     }
@@ -792,20 +516,8 @@
             closeModal();
         }
     });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 </script>
 
 </body>
-</html>
+		</html>
+	
